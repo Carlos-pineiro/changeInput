@@ -31,8 +31,8 @@
       keyPressed = getKeyPressed($(context).val(), $(context).data('oldVal') || ""),
       dispatch = function() {
         event.type = 'changeInput';
-        event.keyCode = keyPressed.charCodeAt(0);
-        event.key = event.which = keyPressed;
+        event.keyCode = event.which = keyPressed.charCodeAt(0);
+        event.key = keyPressed;
         $event.dispatch.apply(context,args);
       };
       if($(context).val() != $(context).data('oldVal')){
